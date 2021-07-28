@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuclear Engineering Manual</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/icons/ne-favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav>
+      <div class="Logo">
+        <a href="index.html"><h1>Engineer's Manual</h1></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <!-- Calculator Popout Section -->
+    <div class="calculator">
+      <button onclick="popout()" class=calcbtn><img src="img/icons/calculator.png" alt=""></button>
+      <div id="myCalc" class="calc-content">
+        <!-- Insert calculator html here -->
+        <div id="output">0</div>
+        <div class="first-row">
+          <button id="r1-1">(</button>
+          <button id="r1-2">)</button>
+          <button id="r1-3">mc</button>
+          <button id="r1-4">m+</button>
+          <button id="r1-5">m-</button>
+          <button id="r1-6">mr</button>
+          <button id="r1-7" value="AC" onclick="forclear()">AC</button>
+          <button id="r1-8" value="+/-" onclick="reverse_sign()">+/-</button>
+          <button id="r1-9" value="%" onclick="perc()">%</button>
+          <button id="r1-10" value="/" onclick="fordisplay('/')">/</button>
+        </div>
+        <div class="second-row">
+          <button id="r2-1">2nd</button>
+          <button id="r2-2">x^2</button>
+          <button id="r2-3">x^3</button>
+          <button id="r2-4">x^y</button>
+          <button id="r2-5">e^x</button>
+          <button id="r2-6">10^x</button>
+          <button id="r2-7" value="7" onclick="fordisplay('7')">7</button>
+          <button id="r2-8" value="7" onclick="fordisplay('8')">8</button>
+          <button id="r2-9" value="7" onclick="fordisplay('9')">9</button>
+          <button id="r2-10" value="X" onclick="fordisplay('*')">X</button>
+        </div>
+        <div class="third-row">
+          <button id="r3-1">1/x</button>
+          <button id="r3-2">sqrt x</button>
+          <button id="r3-3">cbrt x</button>
+          <button id="r3-4">y rt x</button>
+          <button id="r3-5">ln</button>
+          <button id="r3-6">log10</button>
+          <button id="r3-7" value="4" onclick="fordisplay('4')">4</button>
+          <button id="r3-8" value="5" onclick="fordisplay('5')">5</button>
+          <button id="r3-9" value="6" onclick="fordisplay('6')">6</button>
+          <button id="r3-10" value="-" onclick="fordisplay('-')">-</button>
+        </div>
+        <div class="fourth-row">
+          <button id="r4-1">x!</button>
+          <button id="r4-2">sin</button>
+          <button id="r4-3">cos</button>
+          <button id="r4-4">tan</button>
+          <button id="r4-5">e</button>
+          <button id="r4-6">EE</button>
+          <button id="r4-7" value="1" onclick="fordisplay('1')">1</button>
+          <button id="r4-8" value="2" onclick="fordisplay('2')">2</button>
+          <button id="r4-9" value="3" onclick="fordisplay('3')">3</button>
+          <button id="r4-10" value="+" onclick="fordisplay('+')">+</button>
+        </div>
+        <div class="fifth-row">
+          <button id="r5-1">Rad</button>
+          <button id="r5-2">sinh</button>
+          <button id="r5-3">cosh</button>
+          <button id="r5-4">tanh</button>
+          <button id="r5-5">pi</button>
+          <button id="r5-6">Rand</button>
+          <button id="r5-7&8" style="width:105px" value="0" onclick="fordisplay('0')">0</button>
+          <button id="r5-9" value="." onclick="fordisplay('.')">.</button>
+          <button id="r5-10" value="=" onclick="solve()">=</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formula Cards -->
+    <div class="formula-container">
+      <div class="center list flex-column">
+        <h1>NUCLEAR ENGINEERING</h1>
+
+        <div class="card flex-row open">
+          <div class="flex-column info">
+            <div class="title">Mass Number</div>
+            <div class="hidden bottom summary">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ratione impedit temporibus maiores autem aperiam assumenda exercitationem, quisquam nobis esse. 
+            </div>
+          </div>
+        </div>
+
+        <div class="card flex-row">
+          <div class="flex-column info">
+            <div class="title">Mass in Nuclei</div>
+            <div class="hidden bottom summary">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ratione impedit temporibus maiores autem aperiam assumenda exercitationem, quisquam nobis esse.
+            </div>
+          </div>
+        </div>
+
+        <div class="card flex-row">
+          <div class="flex-column info">
+            <div class="title">Nuclear Radius</div>
+            <div class="hidden bottom summary">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ratione impedit temporibus maiores autem aperiam assumenda exercitationem, quisquam nobis esse.
+            </div>
+          </div>
+        </div>
+
+        <div class="card flex-row">
+          <div class="flex-column info">
+            <div class="title">Nuclear Binding Energy</div>
+            <div class="hidden bottom summary">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ratione impedit temporibus maiores autem aperiam assumenda exercitationem, quisquam nobis esse.
+            </div>
+          </div>
+        </div>
+
+        <div class="card flex-row">
+          <div class="flex-column info">
+            <div class="title">Radioactive Decay</div>
+            <div class="hidden bottom summary">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ratione impedit temporibus maiores autem aperiam assumenda exercitationem, quisquam nobis esse.
+            </div>
+          </div>
+        </div>
+
+        <div class="card flex-row">
+          <div class="flex-column info">
+            <div class="title">Batemans' Equations</div>
+            <div class="hidden bottom summary">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ratione impedit temporibus maiores autem aperiam assumenda exercitationem, quisquam nobis esse.
+            </div>
+          </div>
+        </div>
+
+        <div class="card flex-row">
+          <div class="flex-column info">
+            <div class="title">Radiation Flux</div>
+            <div class="hidden bottom summary">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ratione impedit temporibus maiores autem aperiam assumenda exercitationem, quisquam nobis esse.
+            </div>
+          </div>
+        </div>
+
+        <div class="card flex-row">
+          <div class="flex-column info">
+            <div class="title">Breit-Wigner Formula</div>
+            <div class="hidden bottom summary">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ratione impedit temporibus maiores autem aperiam assumenda exercitationem, quisquam nobis esse.
+            </div>
+          </div>
+        </div>
+
+        <div class="card flex-row">
+          <div class="flex-column info">
+            <div class="title">Born Scattering</div>
+            <div class="hidden bottom summary">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ratione impedit temporibus maiores autem aperiam assumenda exercitationem, quisquam nobis esse.
+            </div>
+          </div>
+        </div>
+
+        <div class="card flex-row">
+          <div class="flex-column info">
+            <div class="title">Mott Scattering</div>
+            <div class="hidden bottom summary">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ratione impedit temporibus maiores autem aperiam assumenda exercitationem, quisquam nobis esse.
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>    
+
+    <script src="script.js"></script>
+    
+  </body>
+</html>

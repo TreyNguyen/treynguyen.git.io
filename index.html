@@ -1,155 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trey Portfolio 1</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize/min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+    <title>Trey Nguyen | Web Developer</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/f0aad56f30.js" crossorigin="anonymous"></script>
+
+
 </head>
+
 <body>
+    <!-- Header Menu & Side NavBar -->
     <header>
-        <div class="logo">
-            <h1>TN</h1>
-        </div>
-        <button class="nav-toggle" aria-label="toggle navigation">
+        <button class="header-menu-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
         </button>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#services" class="nav-link">My Services</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
-                <li class="nav-item"><a href="#work" class="nav-link">My Work</a></li>
+        <nav class="header-menu">
+            <ul class="header-menu-list">
+                <li class="header-menu-item"><a href="#home" class="header-menu-link">Home</a></li>
+                <li class="header-menu-item"><a href="#projects" class="header-menu-link">Projects</a></li>
+                <li class="header-menu-item"><a href="#about" class="header-menu-link">About Me</a></li>
+                <li class="hedaer-menu-item"><a href="#resume" class="header-menu-link">Resume</a></li>
+                <li class="header-menu-item"><a href="#contact" class="header-menu-link">Contact Me</a></li>
+            </ul>
+        </nav>
+
+
+        <nav class="side-bar">
+            <ul class="side-bar-list">
+                <li class="side-bar-item">
+                    <img src="img/favicons/icons8-home.png" alt="Home">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="side-bar-item">
+                    <img src="img/favicons/icons8-project.png" alt="Projects">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="side-bar-item">
+                    <img src="img/favicons/icons8-about.png" alt="About">
+                    <a href="#about">About</a>
+                </li>
+                <li class="side-bar-item">
+                    <img src="img/favicons/icons8-resume.png" alt="Resume">
+                    <a href="#resume">Resume</a>
+                </li>
+                <li class="side-bar-item">
+                    <img src="img/favicons/icons8-mail.png" alt="Contact">
+                    <a href="#contact">Contact</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <!-- Introduction -->
     <section class="intro" id="home">
-        <h1 class="section-title section-title-intro">
-            Hi, I am <strong>Trey Nguyen</strong>
-        </h1>
-        <p class="section-subtitle section-subtitle-intro">front-end dev</p>
-        <img src="img/myFace.png" alt="a picture of Trey Nguyen smiling" class="intro-img">
-    </section> 
-
-    <!-- My Services -->
-    <section class="my-services" id="services">
-        <h2 class="section-title section-title-services">What I do</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Design and development</h3>
-                <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, </p>
-            </div>
-            <div class="service">
-                <h3>E-commerce</h3>
-                <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, </p>
-            </div>
-            <div class="service">
-                <h3>WordPress</h3>
-                <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, </p>
-            </div>
-        </div>
-
-        <a href="#work" class="btn">My Work</a>
+        <img src="img/logo_white.png" alt="Logo">
+        <h1>Trey Nguyen<br><span>UX/UI Web Developer</span></h1>
+        <a href="#projects"><span></span></a>
     </section>
 
-    <!-- About Me -->
+    <!-- Projects -->
+    <section class="my-projects" id="projects">
+        <button class="section-title section-title-projects">Projects</button>
+        <!-- Project item 01 -->
+        <div class="card">
+            <figure class="card-thumb">
+                <img src="img/engineers_manual.jpg" alt="Engineer's Manual Picture" class="card-image">
+                <figcaption class="card-caption">
+                    <h2 class="card-title">Engineer's Manual</h2>
+                    <p class="card-snippet">
+                        The ultimate guide for every Engineer. Find your formula in seconds and move on to the next
+                        problem with ease.
+                    </p>
+                    <div class="card-skills">
+                        <h3>HTML5</h3>
+                        <h3>CSS3</h3>
+                        <h3>JAVASCRIPT</h3><br>
+                    </div>
+                    <a href="engineers_manual/index.html" target="_blank" class="card-button">See more</a>
+                </figcaption>
+            </figure>
+        </div>
+        <!-- Project item 02 -->
+        <div class="card">
+            <figure class="card-thumb">
+                <img src="img/christ_collective.jpg" alt="Christ Collective Picture" class="card-image">
+                <figcaption class="card-caption">
+                    <h2 class="card-title">Christ Collective Clothing</h2>
+                    <p class="card-snippet">
+                        Every Christian's one stop shop for the best apparel to praise the LORD and share HIS glory. Be
+                        apart of the collective making a difference.
+                    </p>
+                    <div class="card-skills">
+                        <h3>HTML5</h3>
+                        <h3>CSS3</h3>
+                        <h3>JAVASCRIPT</h3><br>
+                    </div>
+                    <a href="christ_collective/index.html" target="_blank" class="card-button">See more</a>
+                </figcaption>
+            </figure>
+        </div>
+        <!-- Project item 03 -->
+        <div class="card">
+            <figure class="card-thumb">
+                <img src="img/los_angeles.jpg" alt="Los Angeles Chargers Clone Picture" class="card-image">
+                <figcaption class="card-caption">
+                    <h2 class="card-title">Los Angeles Chargers Clone</h2>
+                    <p class="card-snippet">
+                        Fan of NFL Football? Fan of LA? Check out this Chargers website clone and be amazed by all that
+                        you
+                        find.
+                    </p>
+                    <div class="card-skills">
+                        <h3>HTML5</h3>
+                        <h3>CSS3</h3>
+                        <h3>JAVASCRIPT</h3><br>
+                    </div>
+                    <a href="lac_clone/index.html" target="_blank" class="card-button">See more</a>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- About -->
     <section class="about-me" id="about">
-        <h2 class="section-title section-title-about">Who I am</h2>
-        <p class="section-subtitle section-subtitle-about">Designer & developer based out of LV, NV</p>
-        <div class="about-me-body">
-            <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,</p>
-            <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,</p>
-        </div>
-        <img src="img/trey_sitting.png" alt="Trey leaning against a bus" class="about-me-img">
+        <img src="img/headshot.JPG" alt="Trey Nguyen" class="about-me-img">
+        <h2 class="section-title section-title-about">About Me</h2>
+        <p class="section-subtitle section-subtitle-about">Designer & Developer based out of LV, NV</p>
+        <p class="about-me-body">
+            Creative Computer Engineering graduate with a passion for web development and a keen eye for UX/UI design.
+            Currently seeking an opportunity to gain more skills as a developer while making connections in the
+            industry. Eager to help your website grow and always driven to learn something new.
+        </p>
     </section>
 
-    <!-- My Work -->
-    <section class="my-work" id="work">
-        <h2 class="section-title section-title-work">My Work</h2>
-        <p class="section-subtitle section-subtitle-work">A selection of my range of work</p>
-        <div class="portfolio">
-            <!-- Portfolio item 01 -->
-            <a href="portfolio-item.html" class="portfolio-item">
-                <img src="img/testimg.jpg" alt="" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 02 -->
-            <a href="portfolio-item.html" class="portfolio-item">
-                <img src="img/testimg.jpg" alt="" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 03 -->
-            <a href="portfolio-item.html" class="portfolio-item">
-                <img src="img/testimg.jpg" alt="" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 04 -->
-            <a href="portfolio-item.html" class="portfolio-item">
-                <img src="img/testimg.jpg" alt="" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 05 -->
-            <a href="portfolio-item.html" class="portfolio-item">
-                <img src="img/testimg.jpg" alt="" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 06 -->
-            <a href="portfolio-item.html" class="portfolio-item">
-                <img src="img/testimg.jpg" alt="" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 07 -->
-            <a href="portfolio-item.html" class="portfolio-item">
-                <img src="img/testimg.jpg" alt="" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 08 -->
-            <a href="portfolio-item.html" class="portfolio-item">
-                <img src="img/testimg.jpg" alt="" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 09 -->
-            <a href="portfolio-item.html" class="portfolio-item">
-                <img src="img/testimg.jpg" alt="" class="portfolio-img">
-            </a>
-            <!-- Portfolio item 10 -->
-            <a href="portfolio-item.html" class="portfolio-item">
-                <img src="img/testimg.jpg" alt="" class="portfolio-img">
-            </a>
+    <!-- Resume -->
+    <section class="my-resume" id="resume">
+        <h2 class="section-title section-title-resume">Resume</h2>
+        <button type="button" class="collapsible">Skills</button>
+        <div class="content skills-body">
+            <p>
+                <b>Programming Languages:</b><br>
+                HTML, CSS, Javascript (1 year experience), <br>GitHub
+                C++ (1+ year experience), C# (1+ year experience)<br><br>
+                <b>Coding IDEs:</b><br>
+                Visual Studio Code, Atom by Github<br><br>
+                <b>Design Software:</b><br>
+                Affinity Publisher, Designer, Photo<br>
+                Adobe Photoshop, Illustrator, InDesign, Premiere Pro<br>
+                Microsoft Office Apps / Google Apps
+            </p>
+        </div>
+        <button type="button" class="collapsible">Courses Taken</button>
+        <div class="content courses-body">
+            <p>
+                Object Oriented Programming<br>
+                Data Structures and Algorithms<br>
+                Software Engineering<br>
+                Computer Architecture<br>
+                Op Systems for Embedded Apps<br>
+                Network Forensics<br><br>
+                Discrete System Design (VHDL)<br>
+                Digital Circuit Design (Verilog)<br>
+                Introduction to Microcontrollers<br>
+                Microprocessor System Design
+            </p>
+        </div>
+        <button type="button" class="collapsible">Experience</button>
+        <div class="content experience-body">
+            <p>
+                <b>Reading Advisor II, Cal Poly Pomona</b><br>
+                <i>Reading, Advising, and Mentoring Program (RAMP) Trio Student Service || November 2020 -
+                    Present</i><br>
+                ➔ Advised low-income, first-generation, and disabled students on a consistent basis with their academic
+                and financial goals by
+                providing various resources based on their needs.<br>
+                ➔ Oversaw and co-managed a team of 10 tutors by constantly meeting with them and providing guidance when
+                necessary.<br>
+                ➔ Interviewed and hired new tutors for a newly developed web-based atmosphere.<br><br>
+                <b>Learning Strategist, Cal Poly Pomona, CRLA Level 2</b><br>
+                <i>Academic Skills Program, Learning Resource Center || May 2019 – May 2020</i><br>
+                ➔ Developed a specialized lesson plan for students in risk of academic probation in order to learn
+                Academic Skills, which
+                resulted in a 100% success rate of passing the required course.<br>
+                ➔ Established new marketing strategies such as newsletters, guest podcasts, and youtube videos to
+                attract hundreds of
+                students into the Learning Resource Center.<br>
+                ➔ Coordinated training curriculums for new tutors in each of the Learning Resource Center’s
+                programs.<br><br>
+                <b>Tutor/Peer Mentor, Cal Poly Pomona</b><br>
+                <i>Reading, Advising, and Mentoring Program (RAMP) Trio Student Service || August 2018 – November
+                    2020</i><br>
+                ➔ Mentored low-income, first-generation, and disabled students to improve their reading skills and
+                academic performance.<br>
+                ➔ Guided 100% of my tutees to improve their reading skill assessment scores from the beginning to end of
+                each semester.<br>
+                ➔ Coached tutees through various and personalized academic plans to meet them where they were in their
+                academic goals.<br>
+                ➔ Developed and launched new services to the program in order for more community interaction.
+            </p>
+        </div>
+        <button type="button" class="collapsible">Education</button>
+        <div class="content education-body">
+            <p>
+                <b>California Polytechnic State University, Pomona, CA — Computer Engineering, B.S.
+                    Fall 2016 – May 2020 |</b>| Cumulative GPA: 3.64
+            </p>
         </div>
     </section>
 
+    <!-- Contact -->
+    <section class="my-contact" id="contact">
+        <div class="socials">
+            <span>Contact Me</span>
+            <nav>
+                <a href="https://github.com/TreyNguyen"><i class="fa fa-github"></i></a>
+                <a href="mailto:tmnguyen@cpp.edu"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/trey-nguyen-52822b153/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://codepen.io/TreyNguyen"><i class="fab fa-codepen"></i></a>
+            </nav>
+        </div>
+    </section>
 
-
-    <!-- Footer -->
+    <!-- Footer w/ Socials -->
     <footer class="footer">
-        <a href="mailto:tmnguyen@cpp.edu" class="footer-link">tmnguyen@cpp.edu</a>
-        <ul class="social-list">
-            <li class="social-list-item">
-                <a class="social-list-link" href="https://codepen.io">
-                    <i class="fab fa-codepen"></i>
-                </a>
-            </li>
-            <li class="social-list-item">
-                <a class="social-list-link" href ="http://dribble.com">
-                    <i class="fab fa-dribbble"></i>
-                </a>
-            </li>
-            <li class="social-list-item">
-                <a class="social-list-link" href="https://twitter.com">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-            <li class="social-list-item">
-                <a class="social-list-link" href="https://github.com">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-        </ul>
+        <p class="copyright">&copy; 2021 Trey Nguyen, All rights reserved.</p>
     </footer>
 
 
-    <script src="js/index.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>

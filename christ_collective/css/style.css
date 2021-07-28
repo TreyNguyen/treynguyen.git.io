@@ -1,0 +1,235 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Properties */
+:root {
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-secondary: "Bebas Neue", cursive;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-yellow: #ffc163;
+  --clr-navy: #26495c;
+  --clr-darknavy: #113e5c;
+  --clr-amber: #c66b3d;
+  --clr-white: #ffffff;
+  --clr-cream: #f5f0e1;
+  --clr-black: #303030;
+  --clr-grey: #3f3f3f;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+/* General Styles */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--clr-navy);
+  color: var(--clr-navy);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--clr-cream);
+}
+
+.header a {
+  text-decoration: none;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  color: var(--clr-black);
+  padding: 0px 10px;
+}
+
+.header .nav-left {
+  float: left;
+  padding: 45px 40px;
+}
+
+.header .nav-right {
+  float: right;
+  padding: 45px 40px;
+}
+
+.logo {
+  position: relative;
+  left: -100px;
+}
+
+/* Clothing Carousel */
+.main-container {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.card {
+  position: absolute;
+  text-align: center;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  padding-bottom: 700px;
+}
+
+.card h1 {
+  color: var(--clr-cream);
+  text-align: center;
+  font-size: var(--fs-h2);
+}
+
+.card img {
+  width: 500px;
+  height: 600px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.card p {
+  color: var(--clr-cream);
+  text-align: center;
+}
+
+/* Left Item */
+#item-1:checked ~ .cards #piece3,
+#item-2:checked ~ .cards #piece1,
+#item-3:checked ~ .cards #piece2 {
+  transform: translateX(-300px) scale(0.8);
+  opacity: 0.6;
+  z-index: 0;
+}
+#item-1:checked ~ .cards #piece3 h1,
+#item-2:checked ~ .cards #piece1 h1,
+#item-3:checked ~ .cards #piece2 h1,
+#item-1:checked ~ .cards #piece3 p,
+#item-2:checked ~ .cards #piece1 p,
+#item-3:checked ~ .cards #piece2 p {
+  opacity: 0;
+  z-index: 0;
+}
+
+/* Right Item */
+#item-1:checked ~ .cards #piece2,
+#item-2:checked ~ .cards #piece3,
+#item-3:checked ~ .cards #piece1 {
+  transform: translateX(300px) scale(0.8);
+  opacity: 0.6;
+  z-index: 0;
+}
+#item-1:checked ~ .cards #piece2 h1,
+#item-2:checked ~ .cards #piece3 h1,
+#item-3:checked ~ .cards #piece1 h1,
+#item-1:checked ~ .cards #piece2 p,
+#item-2:checked ~ .cards #piece3 p,
+#item-3:checked ~ .cards #piece1 p {
+  opacity: 0;
+  z-index: 0;
+}
+
+/* Main Item */
+#item-1:checked ~ .cards #piece1,
+#item-2:checked ~ .cards #piece2,
+#item-3:checked ~ .cards #piece3 {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Call to Action - Shop Now and Socials */
+.cta-container {
+  height: 200px;
+  position: relative;
+  top: 760px;
+}
+
+.button {
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.button a {
+  text-decoration: none;
+}
+
+.socials {
+  margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.socials a {
+  padding: 0px 6px;
+}
+
+.shop {
+  background-color: var(--clr-darknavy);
+  border-color: var(--clr-white);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 30px;
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  padding: 15px 32px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
